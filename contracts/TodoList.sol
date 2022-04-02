@@ -15,7 +15,7 @@ contract TodoList {
 
     mapping(uint256 => Todo) public todos;
 
-    function createTask(string memory _content) public {
+    function createTodo(string memory _content) public {
         todos[todosCount] = Todo(todosCount, _content, false);
         todosCount = todosCount + 1;
         emit TodoCreated(todosCount, _content, false);
